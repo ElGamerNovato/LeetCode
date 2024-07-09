@@ -5,7 +5,6 @@ class Solution(object):
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        copyNums=nums
-        for counter in range(-1, len(nums)-1):
-            nums[counter+1]=copyNums[counter]
-            print(copyNums[counter], counter)
+        for i in range(k):
+            nums.insert(0,nums[-1])
+            del nums[-1]
